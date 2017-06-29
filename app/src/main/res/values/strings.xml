@@ -2,4 +2,5 @@
     <string name="app_name">Hot Paws</string>
     <string name="edit_message">Enter a Zip Code</string>
     <string name="button_send">Send</string>
+    <color name="white">#FFFFFF</color>
 </resources>
