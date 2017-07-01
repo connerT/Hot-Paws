@@ -1,7 +1,11 @@
 package com.example.connertolley.myfirstapp;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Color;
+import android.graphics.PorterDuff;
 import android.provider.ContactsContract;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
@@ -81,22 +85,32 @@ public class DisplayMessageActivity extends BaseActivity {
             //it's fine
             textViewWarningLabel.setText("No Issues");
             textViewWarning.setText("Take your dog out and play until you can play no more.");
+            ImageView pavementColor = (ImageView) findViewById(R.id.pavementColor);
+            pavementColor.getDrawable().setColorFilter(ContextCompat.getColor(HotPaws.getAppContext(), R.color.green), PorterDuff.Mode.SRC_IN);
         } else if (heatTemp >= 80 && heatTemp < 91) {
             //caution
             textViewWarningLabel.setText(R.string.caution);
             textViewWarning.setText(R.string.cautionMessage);
+            ImageView pavementColor = (ImageView) findViewById(R.id.pavementColor);
+            pavementColor.getDrawable().setColorFilter(ContextCompat.getColor(HotPaws.getAppContext(), R.color.yellow), PorterDuff.Mode.SRC_IN);
         } else if (heatTemp >= 91 && heatTemp < 104) {
             //extreme caution
             textViewWarningLabel.setText(R.string.extremeCaution);
             textViewWarning.setText(R.string.extremeCautionMessage);
+            ImageView pavementColor = (ImageView) findViewById(R.id.pavementColor);
+            pavementColor.getDrawable().setColorFilter(ContextCompat.getColor(HotPaws.getAppContext(), R.color.orange), PorterDuff.Mode.SRC_IN);
         } else if (heatTemp >= 104 && heatTemp < 126) {
             //danger
             textViewWarningLabel.setText(R.string.danger);
             textViewWarning.setText(R.string.dangerMessage);
+            ImageView pavementColor = (ImageView) findViewById(R.id.pavementColor);
+            pavementColor.getDrawable().setColorFilter(Color.RED, PorterDuff.Mode.SRC_IN);
         } else {
             //extreme dange
             textViewWarningLabel.setText(R.string.extremeDanger);
             textViewWarning.setText(R.string.extremeDangerMessage);
+            ImageView pavementColor = (ImageView) findViewById(R.id.pavementColor);
+            pavementColor.getDrawable().setColorFilter(Color.BLACK, PorterDuff.Mode.SRC_IN);
         }
     }
 
