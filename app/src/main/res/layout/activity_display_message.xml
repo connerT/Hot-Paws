@@ -15,8 +15,10 @@
         android:layout_marginTop="32dp"
         android:text="Location:"
         android:textStyle="bold"
-        app:layout_editor_absoluteX="32dp"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="32dp" />
 
     <TextView
         android:id="@+id/city"
@@ -25,7 +27,8 @@
         android:layout_marginLeft="16dp"
         android:text="City"
         app:layout_constraintLeft_toRightOf="@+id/location"
-        app:layout_constraintBaseline_toBaselineOf="@+id/location" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/location"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/tempLabel"
@@ -34,8 +37,10 @@
         android:layout_marginTop="32dp"
         android:text="Temperature:"
         android:textStyle="bold"
-        app:layout_editor_absoluteX="32dp"
-        app:layout_constraintTop_toTopOf="@+id/location" />
+        app:layout_constraintTop_toTopOf="@+id/location"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="32dp" />
 
     <TextView
         android:id="@+id/temperature"
@@ -44,7 +49,8 @@
         android:layout_marginLeft="16dp"
         android:text="Temperature"
         app:layout_constraintLeft_toRightOf="@+id/tempLabel"
-        app:layout_constraintBaseline_toBaselineOf="@+id/tempLabel" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/tempLabel"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/heatIndexLabel"
@@ -53,8 +59,10 @@
         android:layout_marginTop="32dp"
         android:text="Heat Index:"
         android:textStyle="bold"
-        app:layout_editor_absoluteX="32dp"
-        app:layout_constraintTop_toTopOf="@+id/tempLabel" />
+        app:layout_constraintTop_toTopOf="@+id/tempLabel"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="32dp" />
 
     <TextView
         android:id="@+id/heatIndex"
@@ -63,7 +71,8 @@
         android:layout_marginLeft="16dp"
         android:text="Heat Index"
         app:layout_constraintLeft_toRightOf="@+id/heatIndexLabel"
-        app:layout_constraintBaseline_toBaselineOf="@+id/heatIndexLabel" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/heatIndexLabel"
+        android:layout_marginStart="16dp" />
 
     <TextView
         android:id="@+id/weatherLabel"
@@ -72,8 +81,10 @@
         android:layout_marginTop="32dp"
         android:text="Weather:"
         android:textStyle="bold"
-        app:layout_editor_absoluteX="32dp"
-        app:layout_constraintTop_toTopOf="@+id/heatIndexLabel" />
+        app:layout_constraintTop_toTopOf="@+id/heatIndexLabel"
+        android:layout_marginLeft="32dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginStart="32dp" />
 
     <TextView
         android:id="@+id/weather"
@@ -82,7 +93,8 @@
         android:layout_marginLeft="16dp"
         android:text="Weather"
         app:layout_constraintLeft_toRightOf="@+id/weatherLabel"
-        app:layout_constraintBaseline_toBaselineOf="@+id/weatherLabel"/>
+        app:layout_constraintBaseline_toBaselineOf="@+id/weatherLabel"
+        android:layout_marginStart="16dp" />
 
     <ImageView
         android:id="@+id/weatherImage"
@@ -93,7 +105,7 @@
         android:layout_marginStart="16dp"
         app:layout_constraintTop_toBottomOf="@+id/heatIndex"
         app:layout_constraintLeft_toRightOf="@+id/weather"
-        android:layout_marginLeft="0dp" />
+        android:layout_marginLeft="16dp" />
 
     <ImageView
         android:id="@+id/cautionImage"
@@ -101,9 +113,9 @@
         android:layout_height="20dp"
         android:layout_marginTop="52dp"
         app:layout_constraintTop_toBottomOf="@+id/weatherLabel"
-        app:layout_editor_absoluteX="30dp"
         app:srcCompat="@drawable/caution"
-        tools:layout_editor_absoluteX="41dp" />
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <TextView
         android:id="@+id/warningLabel"
@@ -119,10 +131,34 @@
         android:id="@+id/warning"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="6dp"
         android:text="Warning Message Appears here."
-        app:layout_editor_absoluteX="32dp"
-        app:layout_constraintTop_toBottomOf="@+id/warningLabel" />
+        app:layout_constraintTop_toBottomOf="@+id/warningLabel"
+        android:layout_marginLeft="16dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/pavementColor"
+        android:layout_width="15dp"
+        android:layout_height="15dp"
+        app:srcCompat="@android:color/holo_green_dark"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/warning"
+        android:layout_marginLeft="20dp"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:paddingRight="16dp"
+        android:text="Conditions are clear and the temperature is 75. These conditions can make the pavement very hot and possibly damage your animal's paws."
+        app:layout_constraintTop_toBottomOf="@+id/warning"
+        app:layout_constraintLeft_toRightOf="@+id/pavementColor"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginStart="16dp" />
 
 
 </android.support.constraint.ConstraintLayout>
