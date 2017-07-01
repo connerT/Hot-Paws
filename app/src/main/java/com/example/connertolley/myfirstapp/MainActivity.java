@@ -3,12 +3,12 @@ package com.example.connertolley.myfirstapp;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.EditText;
 
-import static android.provider.AlarmClock.EXTRA_MESSAGE;
-
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
     public static final String EXTRA_MESSAGE = "com.example.connertolley.myfirstapp.MESSAGE";
 

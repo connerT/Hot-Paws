@@ -2,5 +2,13 @@
     <string name="app_name">Hot Paws</string>
     <string name="edit_message">Enter a Zip Code</string>
     <string name="button_send">Send</string>
+    <string name="caution">Caution</string>
+    <string name="cautionMessage">Please be cautious when taking your dog outside. No more than 20 minutes play outside at a time with shade and water.</string>
+    <string name="extremeCaution">Extreme Caution</string>
+    <string name="extremeCautionMessage">Please be very cautious when taking your dog outside. No more than 10 minutes play outside at a time with shade and water.</string>
+    <string name="danger">Danger</string>
+    <string name="dangerMessage">Please do not play with your dog outside. It is too hot. Dogs should be indoors or in shade with water available.</string>
+    <string name="extremeDanger">Extreme Danger</string>
+    <string name="extremeDangerMessage">Please do not play with your dog outside at all. It is too hot. Dogs should be indoors with water available.</string>
     <color name="white">#FFFFFF</color>
 </resources>

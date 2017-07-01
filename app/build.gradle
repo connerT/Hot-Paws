@@ -27,5 +27,9 @@ dependencies {
     compile 'com.android.support:appcompat-v7:26.+'
     compile 'com.android.support.constraint:constraint-layout:1.0.2'
     compile 'com.loopj.android:android-async-http:1.4.9'
+    compile group: 'org.apache.commons', name: 'commons-lang3', version: '3.0'
+    compile group: 'com.koushikdutta.ion', name: 'ion', version: '1.0.9'
+
+
     testCompile 'junit:junit:4.12'
 }
